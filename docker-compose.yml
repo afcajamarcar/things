@@ -5,5 +5,12 @@ services:
     command: npm start
     volumes:
       - .:/usr/src/app
+      - /usr/src/app/node_modules
     ports:
       - 5001:8080
+    depends_on:
+      - mongo
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
