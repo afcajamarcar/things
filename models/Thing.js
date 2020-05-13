@@ -5,8 +5,8 @@ mongoose.set('useCreateIndex', true);
 const Schema = mongoose.Schema;
 
 const thingSchema = new Schema({
-  _id: {type: String},
-  name: String,
+  _id: { type: Number },
+  name: { type: String, required: true },
 });
 
-export const Thing = mongoose.model('Thing', thingSchema);
+export const Thing = mongoose.model('Thing', thingSchema, 'Thing');
