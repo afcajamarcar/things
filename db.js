@@ -1,6 +1,5 @@
 import mongoose from 'mongoose';
-
-const mongoUrl = "mongodb://mongo/things";
+import { mongoUrl } from './config/config'
 
 mongoose.Promise = Promise
 

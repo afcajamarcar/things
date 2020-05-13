@@ -1,10 +1,9 @@
 import express from 'express';
 import * as db from './db';
 import { Thing } from './models/Thing';
+import { port } from './config/config'
 
 const app = express();
-const port = 8080;
-
 
 (async () => { await db.initMongo() })();
 
